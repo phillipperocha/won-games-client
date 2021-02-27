@@ -6,7 +6,6 @@ export default {
   component: Footer,
 } as Meta
 
-// Só criaremos uma div que irá encapsular nosso footer com um estilo simples
 export const Default: Story = (args) => (
   <div style={{ maxWidth: '130rem', margin: '0 auto' }}>
     <Footer {...args} />
