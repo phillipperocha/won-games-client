@@ -17,14 +17,16 @@ describe('<Highlight />', () => {
     renderWithTheme(<Highlight {...props} />)
 
     expect(
-      screen.getByRole('heading', { name: /heading 1/i })
+      screen.getByRole('heading', { name: props.title })
     ).toBeInTheDocument()
 
     expect(
-      screen.getByRole('heading', { name: /heading 2/i })
+      screen.getByRole('heading', { name: props.subtitle })
     ).toBeInTheDocument()
 
-    expect(screen.getByRole('link', { name: /buy now/i })).toBeInTheDocument()
+    expect(
+      screen.getByRole('link', { name: props.buttonLabel })
+    ).toBeInTheDocument()
   })
 
   it('should render background image', () => {
